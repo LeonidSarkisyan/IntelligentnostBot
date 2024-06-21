@@ -15,6 +15,6 @@ def get_balance_show_keyboard(amount: int = 0) -> InlineKeyboardMarkup:
 def get_enough_money_keyboard() -> InlineKeyboardMarkup:
     ikb = InlineKeyboardBuilder()
 
-    ikb.button(text="Пополнить баланс", url="http:localhost")
+    ikb.button(text="Пополнить баланс", url="http://intelligent-store.ru/card")
 
     return ikb.as_markup()
