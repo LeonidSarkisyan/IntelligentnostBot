@@ -1,0 +1,4 @@
+aiogram
+python-dotenv
+yoyo-migrations
+asyncpg

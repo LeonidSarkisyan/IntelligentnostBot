@@ -1,0 +1,43 @@
+
+
+.card__title {
+    font-size: 30px;
+
+    margin-top: 150px;
+    margin-bottom: 16px;
+}
+
+.card__subtitle {
+    font-size: 28px;
+}
+
+.card {
+    padding: 15px;
+
+    background: #EF3124;
+    border-radius: 8px;
+
+    max-width: 300px;
+    margin-bottom: 16px;
+}
+
+.card__logo {
+    width: 50px;
+}
+
+.card__flex {
+    display: flex;
+}
+
+.card__number {
+    font-weight: 700;
+    font-size: 20px;
+    color: whitesmoke;
+
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.copy {
+    cursor: pointer;
+}

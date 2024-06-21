@@ -1,0 +1,327 @@
+.question__form {
+    padding: 15px;
+
+    border-radius: 10px;
+    border: 2px solid var(--color-text);
+
+    margin-bottom: 16px;
+}
+
+.question__form__title {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.question__list__point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffc3a2;
+
+    border: 2px solid var(--color-text);
+    border-radius: 4px;
+
+    width: 40px;
+    height: 40px;
+
+    font-weight: 700;
+    font-size: 20px;
+
+    margin-top: 16px;
+    margin-right: 16px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.question__list__point:hover {
+    background: #ffd9c2;
+}
+
+.plus {
+    background: #ffe4d2;
+    font-size: 26px;
+}
+
+.question__list__point__active {
+    background: #ff7c32;
+    color: whitesmoke;
+    cursor: default;
+}
+
+.question__list__point__active:hover {
+    background: #ff7c32;
+    color: whitesmoke;
+}
+
+.text {
+    width: calc(100% - 15px);
+}
+
+.answer__point {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.answer__point__checkbox {
+    width: 44px;
+    height: 44px;
+
+    margin-right: 16px;
+
+    cursor: pointer;
+}
+
+.answer__point__delete {
+    margin-left: 16px;
+
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    line-height: 44px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.answer__point__delete:hover {
+    color: var(--color-text-howered);
+}
+
+.answer__point__delete__disable {
+    color: var(--color-text-howered);
+
+    cursor: default;
+}
+
+.tests__form {
+    width: 780px;
+}
+
+.tests__form__title {
+    padding: 16px;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    border-bottom: 2px var(--color-text) solid;
+}
+
+.tests__form__body {
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.test__title__label {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.create {
+    margin-bottom: 16px;
+}
+
+.title__span {
+    display: inline-block;
+
+    margin-right: 16px;
+}
+
+.margin__button {
+    margin-bottom: 60px;
+}
+
+.margin__button8 {
+    margin-bottom: 8px;
+}
+
+.margin__button16 {
+    margin-bottom: 16px;
+}
+
+.margin__left16 {
+    margin-left: 16px;
+}
+
+.chat__gpt__icon {
+    width: 36px;
+    height: 36px;
+}
+
+.chat__gpt__button {
+    background: var(--chatgpt-background);
+
+    border: 2px solid var(--chatgpt-color);
+}
+
+.chat__gpt__button:hover {
+    background: var(--chatgpt-howered);
+}
+
+.chat__color {
+    color: var(--chatgpt-color);
+}
+
+.chat__color::placeholder {
+    color: var(--chatgpt-color);
+}
+
+.chat__title {
+    border-bottom: 2px var(--chatgpt-color) solid;
+}
+
+.chat__border {
+    border: 2px solid var(--chatgpt-color);
+}
+
+.chat__button {
+
+}
+
+.chat__button:hover {
+    background: var(--chatgpt-color);
+    color: whitesmoke;
+}
+
+.count__questions {
+    cursor: pointer;
+
+    margin-bottom: 16px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--chatgpt-color);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.note {
+    color: var(--chatgpt-color);
+    margin-bottom: 16px;
+}
+
+.wait {
+    margin-right: 16px;
+}
+
+.title__container {
+    display: flex;
+
+    margin-bottom: 25px;
+
+    height: 39px;
+}
+
+.delete {
+    width: 40px;
+
+    margin-left: auto;
+
+    padding: 0;
+}
+
+.group__input {
+    width: 122.5%;
+}
+
+.group__input__ {
+
+}
+
+.group {
+    margin-bottom: 32px;
+}
+
+.group__delete {
+    font-size: 24px;
+
+    height: 34px;
+}
+
+.question__type__description {
+    font-weight: 400;
+}
+
+.groups {
+    margin-right: 60px;
+}
+
+.choose__group {
+    margin-left: 16px;
+    height: 44px;
+
+    cursor: pointer;
+}
+
+.number__group {
+    font-size: 26px;
+    font-weight: 700;
+
+    margin-right: 16px;
+
+    width: 40px;
+}
+
+.groups__names {
+    width: 40%;
+}
+
+.variants {
+    width: 125%;
+}
+
+.test__header__menu {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+.question__list {
+    padding-top: 0;
+}
+
+.db {
+    display: block;
+}
+
+.loaded__image {
+    width: 10%;
+}
