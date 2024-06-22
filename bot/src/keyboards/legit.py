@@ -6,7 +6,7 @@ from aiogram.types.inline_keyboard_markup import InlineKeyboardMarkup
 def get_legit_confirm_keyboard() -> InlineKeyboardMarkup:
     ikb = InlineKeyboardBuilder()
 
-    ikb.button(text="Скинуть вещь на легит", callback_data="ask__photos")
+    ikb.button(text="Перейти к проверке", callback_data="ask__photos")
     ikb.button(text="Ознакомиться с инструкцией", url="https://telegra.ph/Instrukciya-dlya-legit-checka-06-05")
     ikb.button(text="Назад", callback_data=f"start")
 

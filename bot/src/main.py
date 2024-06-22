@@ -32,7 +32,7 @@ async def main():
     dp = Dispatcher()
 
     routers = [
-        balance.router, basic.router, about.router, find.router, legit_client.router, legit_moderator.router,
+        basic.router, balance.router, about.router, find.router, legit_client.router, legit_moderator.router,
         order_client.router, order_moderator.router
     ]
 
