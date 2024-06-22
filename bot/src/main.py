@@ -4,6 +4,7 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
+from bot.src.middlewares.limit import RateLimitMiddleware
 
 from src.config import BOT_TOKEN
 
@@ -30,6 +31,9 @@ async def main():
     await set_commands(bot)
 
     dp = Dispatcher()
+
+    dp.message.middleware.register(RateLimitMiddleware(60, 60))
+    dp.callback_query.middleware.register(RateLimitMiddleware(60, 60))
 
     routers = [
         basic.router, balance.router, about.router, find.router, legit_client.router, legit_moderator.router,
