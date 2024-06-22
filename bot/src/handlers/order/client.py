@@ -34,6 +34,18 @@ async def show_order_details(call: CallbackQuery, state: FSMContext):
     await state.update_data(screens=[])
 
 
+@router.message(F.text == "/order")
+async def show_order_details(message: Message, state: FSMContext):
+    await message.answer(
+        ORDER_START_MESSAGE
+    )
+    await message.answer(
+        ASK_TWO_SCREENS_MESSAGE, reply_markup=get_photos_done_keyboard()
+    )
+    await state.set_state(OrderStates.get_screens)
+    await state.update_data(screens=[])
+
+
 @router.message(OrderStates.get_screens)
 async def get_screens(message: Message, state: FSMContext, bot: Bot):
     data = await state.get_data()

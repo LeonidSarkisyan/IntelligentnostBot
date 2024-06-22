@@ -14,11 +14,19 @@ async def set_commands(bot: Bot):
         ),
         BotCommand(
             command="balance",
-            description="Узнать свой баланс"
+            description="Мой баланс"
+        ),
+        BotCommand(
+            command="order",
+            description="Заказать вещь"
+        ),
+        BotCommand(
+            command="legit",
+            description="Legit Check"
         ),
         BotCommand(
             command="find",
-            description="Найти вещь"
+            description="Поиск айтема"
         ),
         BotCommand(
             command="cancel",

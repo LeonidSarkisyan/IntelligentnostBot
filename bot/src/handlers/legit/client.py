@@ -34,10 +34,9 @@ async def show_legit_description(call: CallbackQuery):
     await call.message.edit_text(LEGIT_DESCRIPTION, reply_markup=get_legit_confirm_keyboard())
 
 
-@router.callback_query(F.data == "legit")
-async def get_guide_before_send(call: CallbackQuery):
-    await call.answer()
-    await call.message.answer(LEGIT_GUIDE_MESSAGE, reply_markup=get_legit_guide_keyboard())
+@router.message(F.text == "/legit")
+async def get_guide_before_send(message: Message):
+    await message.answer(LEGIT_GUIDE_MESSAGE, reply_markup=get_legit_guide_keyboard())
 
 
 @router.callback_query(F.data == "ask__photos")
