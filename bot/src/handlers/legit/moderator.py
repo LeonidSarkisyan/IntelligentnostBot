@@ -23,7 +23,7 @@ async def legit_true_handler(call: CallbackQuery, bot: Bot):
     legit_id = call.data.split(":")[-1]
     await legit_service.original(legit_id)
     await call.message.answer(DECISION_SENT_TO_USER_MESSAGE)
-    await bot.send_message(user_id, ORIGINAL_MESSAGE)
+    await bot.send_message(user_id, ORIGINAL_MESSAGE, disable_web_page_preview=True)
 
 
 @router.callback_query(F.data.startswith("legit_check:false:"))
@@ -33,7 +33,7 @@ async def legit_false_handler(call: CallbackQuery, bot: Bot):
     legit_id = call.data.split(":")[-1]
     await legit_service.not_original(legit_id, user_id)
     await call.message.answer(DECISION_SENT_TO_USER_MESSAGE)
-    await bot.send_message(user_id, NOT_ORIGINAL_MESSAGE)
+    await bot.send_message(user_id, NOT_ORIGINAL_MESSAGE, disable_web_page_preview=True)
 
 
 @router.callback_query(F.data.startswith("legit_check:fail:"))
