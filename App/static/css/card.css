@@ -1,9 +1,6 @@
-.container__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+body {
+    margin: 0;
+    padding: 0;
 }
 
 .card__title {
@@ -49,4 +46,25 @@
 
 .copy {
     cursor: pointer;
+}
+
+.card__img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.icon {
+    position: absolute;
+}
+
+.tg {
+    bottom: 15%;
+    left: 35%;
+    transform: scale(2.75);
+}
+
+.vk {
+    bottom: 30%;
+    left: 35%;
+    transform: scale(2.75);
 }
