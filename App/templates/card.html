@@ -7,10 +7,11 @@
     <title>Intelligentnost Card</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container container__card">
         <h1 class="card__title">
             Пополнить баланс можно, скинув нужную сумму на эту карту:
         </h1>
+        <img src="../static/al" alt="">
         <div class="card">
             <img
                     class="card__logo"
@@ -21,7 +22,7 @@
                 <div class="card__number">
                     2200 1529 2038 1392
                 </div>
-                <div class="copy">
+                <div class="copy" id="copy">
                     <img src="../static/img/copy.png" alt="Скопировать номер карты">
                 </div>
             </div>
@@ -31,4 +32,19 @@
         </h2>
     </div>
 </body>
+<script>
+    document.getElementById("copy").addEventListener("click", e => {
+        const textarea = document.createElement('textarea');
+        textarea.value = "2200152920381392";
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            console.log('Text copied to clipboard');
+        } catch (error) {
+            console.error('Error copying text: ', error);
+        }
+        document.body.removeChild(textarea);
+    })
+</script>
 </html>

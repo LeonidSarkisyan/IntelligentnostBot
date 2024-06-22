@@ -1,14 +1,21 @@
-
+.container__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
 
 .card__title {
-    font-size: 30px;
+    text-align: center;
+    font-size: 3em;
 
     margin-top: 150px;
-    margin-bottom: 16px;
+    margin-bottom: 128px;
 }
 
 .card__subtitle {
-    font-size: 28px;
+    font-size: 3em;
 }
 
 .card {
@@ -17,8 +24,10 @@
     background: #EF3124;
     border-radius: 8px;
 
-    max-width: 300px;
-    margin-bottom: 16px;
+    max-width: 400px;
+    margin-bottom: 128px;
+
+    transform: scale(2);
 }
 
 .card__logo {
