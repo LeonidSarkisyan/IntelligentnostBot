@@ -4,7 +4,8 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from bot.src.middlewares.limit import RateLimitMiddleware
+
+from src.middlewares.limit import RateLimitMiddleware
 
 from src.config import BOT_TOKEN
 
