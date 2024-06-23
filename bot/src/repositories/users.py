@@ -1,6 +1,7 @@
 import asyncpg
 
 import src.models.users
+from src.database import get_connect_with_database
 
 
 class UserRepository:
@@ -10,6 +11,7 @@ class UserRepository:
         self.db = db
 
     async def create(self, id_: int, username: str) -> Exception:
+        self.db = await get_connect_with_database()
         try:
             await self.db.execute(f"INSERT INTO users (id, username) VALUES ('{id_}', '{username}')")
         except asyncpg.exceptions.UniqueViolationError as e:
@@ -17,6 +19,8 @@ class UserRepository:
             return e
 
     async def get(self, id_: int) -> src.models.users.User:
+        self.db = await get_connect_with_database()
+
         query = "SELECT id, username, balance FROM users WHERE id = $1"
 
         record = await self.db.fetchrow(query, id_)
@@ -29,10 +33,12 @@ class UserRepository:
         return u
 
     async def add_money(self, id_: int, added_money: int):
+        self.db = await get_connect_with_database()
         stmt = f"UPDATE users SET balance = balance + {added_money} WHERE id = {id_}"
         await self.db.execute(stmt)
 
     async def spend_money(self, id_: int, spent_money: int):
+        self.db = await get_connect_with_database()
         stmt = f"UPDATE users SET balance = balance - {spent_money} WHERE id = {id_}"
         await self.db.execute(stmt)
 
