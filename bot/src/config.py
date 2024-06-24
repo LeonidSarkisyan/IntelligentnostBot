@@ -24,3 +24,5 @@ FIND_PRICE = int(os.environ.get("FIND_PRICE"))
 COUNT_START_BONUS_MONEY = 150
 
 SITE_NAME = "https://intelligent-store.ru"
+
+SITE_CARD = SITE_NAME + "/card"

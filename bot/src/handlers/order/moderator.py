@@ -7,6 +7,7 @@ from src.services.order import order_service
 from src.texts.balance import INCORRECT_AMOUNT_MESSAGE
 from src.texts.find import SEND_REASON_DENY_MESSAGE
 from src.texts.order import ASK_COST_MESSAGE, get_cost_message, COST_SEND_USER_MESSAGE, get_deny_reason_order_message
+from src.keyboards.order import get_pay_after_order_keyboard
 
 
 class OrderStates(StatesGroup):
@@ -41,7 +42,7 @@ async def get_cost_and_send_user(message: Message, state: FSMContext, bot: Bot):
     await order_service.set_cost(data["order_id"], cost)
 
     await bot.send_message(
-        data["user_id"], get_cost_message(cost)
+        data["user_id"], get_cost_message(cost), reply_markup=get_pay_after_order_keyboard()
     )
 
     await message.answer(COST_SEND_USER_MESSAGE)
