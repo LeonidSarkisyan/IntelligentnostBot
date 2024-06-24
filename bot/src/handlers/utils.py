@@ -1,6 +1,6 @@
 from aiogram.types import Message
 
-from src.keyboards.balance import get_balance_show_keyboard, get_enough_money_keyboard
+from src.keyboards.balance import get_enough_money_keyboard
 from src.texts.utils import get_enough_money_message
 
 
