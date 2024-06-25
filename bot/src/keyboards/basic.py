@@ -6,7 +6,7 @@ def get_start_keyboard() -> InlineKeyboardMarkup:
     ikb = InlineKeyboardBuilder()
 
     ikb.button(text="Заказать вещь", callback_data="order")
-    ikb.button(text="Legit Chek", callback_data="start__legit")
+    ikb.button(text="Legit Check", callback_data="start__legit")
     ikb.button(text="Поиск айтема", callback_data="start__find")
     ikb.button(text="Мой баланс", callback_data="balance")
     ikb.button(text="О нас", callback_data="about")

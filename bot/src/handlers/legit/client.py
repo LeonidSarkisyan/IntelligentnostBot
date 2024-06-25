@@ -15,7 +15,7 @@ from src.services.users import user_service
 from src.texts.legit import LEGIT_DESCRIPTION, LEGIT_GUIDE_MESSAGE, ASK_PHOTOS_MESSAGE, INCORRECT_PHOTOS_MESSAGE, \
     ONE_MORE_PHOTO_MESSAGE, ASK_TEXT_MESSAGE, THANKS_REPORT_MESSAGE, NO_SURE_MESSAGE_LEGIT, \
     get_new_report_legit_message, ASK_SOLVE_MESSAGE
-from src.texts.utils import get_price_message, get_sure_message
+from src.texts.utils import get_sure_message
 
 
 class LegitStates(StatesGroup):
