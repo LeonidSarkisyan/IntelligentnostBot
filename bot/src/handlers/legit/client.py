@@ -8,8 +8,7 @@ from src.config import LEGIT_PRICE, MODERATOR_ID
 from src.handlers.utils import enough_money_handler
 from src.keyboards.basic import get_start_keyboard
 from src.keyboards.find import get_photos_done_keyboard, get_sure_keyboard
-from src.keyboards.legit import get_legit_confirm_keyboard, get_legit_guide_keyboard, get_ask_text_keyboard, \
-    get_solve_legit_keyboard
+from src.keyboards.legit import get_legit_confirm_keyboard, get_ask_text_keyboard, get_solve_legit_keyboard
 from src.services.exceptions import EnoughMoney
 from src.services.legit import legit_service
 from src.services.users import user_service
@@ -36,7 +35,7 @@ async def show_legit_description(call: CallbackQuery):
 
 @router.message(F.text == "/legit")
 async def get_guide_before_send(message: Message):
-    await message.answer(LEGIT_GUIDE_MESSAGE, reply_markup=get_legit_guide_keyboard())
+    await message.answer(LEGIT_DESCRIPTION, reply_markup=get_legit_confirm_keyboard())
 
 
 @router.callback_query(F.data == "ask__photos")

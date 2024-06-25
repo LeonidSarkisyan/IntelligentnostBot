@@ -15,16 +15,6 @@ def get_legit_confirm_keyboard() -> InlineKeyboardMarkup:
     return ikb.as_markup()
 
 
-def get_legit_guide_keyboard() -> InlineKeyboardMarkup:
-    ikb = InlineKeyboardBuilder()
-
-    ikb.button(text="Продолжить", callback_data=f"ask__photos")
-
-    ikb.adjust(1)
-
-    return ikb.as_markup()
-
-
 def get_ask_text_keyboard() -> ReplyKeyboardMarkup:
     ikb = ReplyKeyboardBuilder()
 
